@@ -1,5 +1,7 @@
 # swarm_sample
 
+from https://docs.docker.com/get-started/
+
 **create/start service**  
 docker stack deploy -c docker-compose.yml getstartedlab
 
