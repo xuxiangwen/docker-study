@@ -20,6 +20,6 @@ docker service ps <service>                  # List tasks associated with an app
 docker stack ps  <service>                                    # as same as above  
 docker inspect <task or container>                   # Inspect task or container  
 docker container ls -q                                      # List container IDs  
-docker stack rm <appname>                             # Tear down an application
-docker swarm leave --force      # Take down a single node swarm from the manager
-
+docker stack rm <appname>                             # Tear down an application  
+docker swarm leave --force      # Take down a single node swarm from the manager  
+  
