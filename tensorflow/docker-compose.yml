@@ -1,0 +1,45 @@
+version: "3"
+services:
+ # gpu:
+ #   build:
+ #     context: ./gpu
+ #   hostname: "{{.Service.Name}}"
+ #   ports:
+ #     - "18888:8888"
+ #   volumes:
+ #     - "/home/grid/eipi10:/notebooks/eipi10"
+ #   deploy:
+ #     placement:
+ #       constraints: [node.hostname == aa00]
+ #   command: /run_jupyter.sh --allow-root --NotebookApp.token='xxw'
+ #   networks:
+ #     - net
+  cpu:
+    image: 127.0.0.1:9900/tensorflow:latest-py3 
+    hostname: "{{.Service.Name}}-{{.Task.Slot}}"
+    ports:
+      - "28888:8888"
+    volumes:
+      - "/home/grid/eipi10:/notebooks/eipi10"
+    deploy:
+#      replicas: 4
+      placement:
+        constraints: [node.hostname == aa00]
+    command: /run_jupyter.sh --allow-root --NotebookApp.token='xxw'
+    networks:
+      - net
+  cpu1:
+    image: 127.0.0.1:9900/tensorflow:latest-py3
+    hostname: "{{.Service.Name}}-{{.Task.Slot}}"
+    ports:
+      - "38888:8888"
+    volumes:
+      - "/home/grid/eipi10:/notebooks/eipi10"
+    deploy:
+      placement:
+        constraints: [node.hostname == aa01]
+    command: /run_jupyter.sh --allow-root --NotebookApp.token='xxw'
+    networks:
+      - net
+networks:
+  net:
