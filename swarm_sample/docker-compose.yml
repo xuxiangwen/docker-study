@@ -3,22 +3,26 @@ services:
   web:
     # replace username/repo:tag with your name and image details
     image: microsheen/get-started:part2
+    hostname: "{{.Service.Name}}-{{.Task.Slot}}"
     deploy:
-      replicas: 4
+      replicas: 1
       resources:
         limits:
           cpus: "0.1"
           memory: 50M
       restart_policy:
         condition: on-failure
+    deploy:
+      placement:
+        constraints: [node.role != manager]
     ports:
-      - "80:80"
+      - "8800:80"
     networks:
       - webnet
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
-      - "8080:8080"
+      - "8888:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
@@ -30,11 +34,11 @@ services:
     image: redis
     ports:
       - "6379:6379"
-    volumes:
-      - "./data:/data"
+   # volumes:
+   #   - "./data:/data"
     deploy:
       placement:
-        constraints: [node.role == manager]
+        constraints: [node.role != manager]
     command: redis-server --appendonly yes
     networks:
       - webnet
