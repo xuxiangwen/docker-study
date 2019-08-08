@@ -1,8 +1,8 @@
-参考 https://www.youngcoding.top/proj/82.html   
-当前实验的位置的是在aa03
+参考 https://github.com/silverwind/droppy
 
+文件共享服务器.可以上传，下载，浏览
+
+启动容器
 ~~~
-docker-compose stop
-docker-compose build
 docker-compose up -d
 ~~~
