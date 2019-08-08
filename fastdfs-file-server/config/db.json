@@ -1,0 +1,46 @@
+{
+  "users": {
+    "a": {
+      "hash": "60e6b327dcf9e01a324001c0bca14da5f140e8a2e68934210600dedee119f4b5$66e10522",
+      "privileged": true
+    },
+    "grid": {
+      "hash": "108db2bb7205649b457501be0e1369a7c49618ad001d4081cb6e20faa93eb73b$96e500b4",
+      "privileged": true
+    }
+  },
+  "sessions": {
+    "1Vqao7MD414cvGKG+faTbtqsKdrvlAcCEid581qamZTvoXIq": {
+      "privileged": true,
+      "username": "a",
+      "lastSeen": 1565242690007
+    },
+    "koAwqbL8MEl4wB/zKDMsNL8lg1NN7AXBJD0VIks1u7PBtPRW": {
+      "privileged": true,
+      "username": "a",
+      "lastSeen": 1565244407347
+    },
+    "N9vEOW3y6WD6OfxSr8hMRr9ZAlYuZaCnwH5Ed9tQzYK23TQV": {
+      "privileged": true,
+      "username": "a",
+      "lastSeen": 1565244662706
+    },
+    "K5fFOetLeX66C5Mz8HKazMh7klygWUu00aui0U9fUEB0Umpi": {
+      "privileged": true,
+      "username": "a",
+      "lastSeen": 1565243900214
+    },
+    "eapSmcnAmTrrjV70esl6QdygOpH/W+n5T+yIScRStCP/3rZ1": {
+      "privileged": true,
+      "username": "a",
+      "lastSeen": 1565243918254
+    }
+  },
+  "links": {
+    "ygAie": {
+      "location": "/redshift/brain.pdf",
+      "attachement": true,
+      "ext": ".pdf"
+    }
+  }
+}
